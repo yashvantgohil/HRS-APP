@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loadUser, singUp } from "../../store/auth/actions";
 import * as yup from "yup";
+import { toast } from "react-toastify";
 const SignUpForm = (props) => {
   const initialValues = {
     email: "",
@@ -33,10 +34,11 @@ const SignUpForm = (props) => {
       .required("password is required"),
   });
 
-  const onSubmit = (values, { setSubmitting }) => {
+  const onSubmit = async (values, { setSubmitting }) => {
     setSubmitting(true);
-    dispatch(singUp(values));
+    await dispatch(singUp(values));
     setSubmitting(false);
+    toast.success("singup successful !!");
   };
 
   return (

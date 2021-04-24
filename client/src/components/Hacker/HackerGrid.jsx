@@ -7,6 +7,7 @@ import InfoIcon from "@material-ui/icons/Info";
 import { deleteHacker, fetchAllHacker } from "../../store/hacker/actions";
 import { Button } from "@material-ui/core";
 import { DataGrid, GridToolbar } from "@material-ui/data-grid";
+import { toast } from "react-toastify";
 const HackerGrid = (props) => {
   let hackers = useSelector((state) => state.hacker.hackers);
   const dispatch = useDispatch();
@@ -78,7 +79,10 @@ const HackerGrid = (props) => {
       renderCell: (params) => (
         <DeleteIcon
           color="error"
-          onClick={() => dispatch(deleteHacker(params.id))}
+          onClick={async () => {
+            await dispatch(deleteHacker(params.id));
+            toast.success("deleted successfully !!");
+          }}
         />
       ),
     },

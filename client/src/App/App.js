@@ -52,14 +52,25 @@ const App = () => {
           />
         </div>
         <div className="d-flex flex-column">
-          <h1
-            className="mb-5 p-4 text-center text-break"
+          <div
+            className="p-4 text-center text-break"
             style={{
               fontFamily: "monospace",
             }}
           >
-            {">>"} Hacker_Ranking_System {isAdminLogin ? "@admin" : "@user"}
-          </h1>
+            <h1>
+              {">>"} Hacker_Ranking_System {isAdminLogin ? "@admin" : "@user"}
+            </h1>
+          </div>
+          <div
+            className="mb-2 text-center text-break"
+            style={{
+              fontFamily: "monospace",
+            }}
+          >
+            <p>{">>"} Admin : [ email : admin@gmail.com , password : 12345 ]</p>
+            <p>{">>"} User : [ email : yash@gmail.com , password : 12345 ]</p>
+          </div>
           <div className="align-self-center">
             <Paper elevation={3} className="p-5">
               <Switch>

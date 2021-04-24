@@ -9,7 +9,7 @@ export default function Hacker() {
 
   useEffect(() => {
     dispatch(fetchAllHacker());
-  }, [dispatch]);
+  }, []);
 
   return (
     <div>

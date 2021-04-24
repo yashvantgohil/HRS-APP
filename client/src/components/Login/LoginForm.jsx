@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { loadUser, login } from "../../store/auth/actions";
 import * as yup from "yup";
 import { useEffect } from "react";
+import { toast } from "react-toastify";
 
 const LoginForm = (props) => {
   const initialValues = {
@@ -39,8 +40,9 @@ const LoginForm = (props) => {
     setSubmitting(true);
     await dispatch(login(values));
     setSubmitting(false);
+    toast.success("login successful !!");
     debugger;
-    if (redirectURL) props.history.replace(redirectURL);
+    // if (redirectURL) props.history.replace(redirectURL);
   };
 
   return (

@@ -3,6 +3,7 @@ import { Field, Form, Formik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
 import { addHacker, updateHacker } from "../../store/hacker/actions";
 import * as yup from "yup";
+import { toast } from "react-toastify";
 
 const HackerForm = (props) => {
   const hacker = useSelector((state) =>
@@ -31,6 +32,7 @@ const HackerForm = (props) => {
     if (!hacker) await dispatch(addHacker(values));
     else await dispatch(updateHacker(hacker._id, values));
     setSubmitting(false);
+    toast.success("saved successfully !!");
     props.history.replace("/hackers");
   };
 
