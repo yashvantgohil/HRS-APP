@@ -1,0 +1,5 @@
+{
+    "name" : "hacker-ranking-system-api",
+    "DatabaseURI" : "mongodb+srv://yashvant:yashvant@dummy.61kfr.mongodb.net/?retryWrites=true&w=majority",
+    "jwtPrivateKey" : "HRS12345"
+}
