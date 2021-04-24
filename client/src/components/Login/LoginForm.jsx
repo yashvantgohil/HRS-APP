@@ -57,7 +57,7 @@ const LoginForm = (props) => {
               required
               name="email"
               label="Email"
-              placeholder="eg. abc@gmail.com"
+              placeholder="admin@gmail.com or yash@gmail.com"
               error={!!errors.email}
               helperText={errors.email}
               as={TextField}
@@ -69,6 +69,7 @@ const LoginForm = (props) => {
               required
               name="password"
               label="Password"
+              placeholder="12345"
               error={!!errors.password}
               helperText={errors.password}
               as={TextField}

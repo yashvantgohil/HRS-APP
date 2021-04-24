@@ -53,7 +53,7 @@ const App = () => {
         </div>
         <div className="d-flex flex-column">
           <h1
-            className="mb-5 p-4 text-center "
+            className="mb-5 p-4 text-center text-break"
             style={{
               fontFamily: "monospace",
             }}

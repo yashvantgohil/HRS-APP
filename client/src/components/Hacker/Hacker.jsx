@@ -15,7 +15,7 @@ export default function Hacker() {
     <div>
       {/* <pre>{JSON.stringify(hackers, null, 2)}</pre> */}
       {/* <div className="mt-5 list-group d-flex flex-lg-row justify-content-md-around"> */}
-      <div className="container">
+      <div className="container mt-4">
         <div className="row">
           {hackers &&
             hackers.map((hacker) => (

@@ -53,6 +53,7 @@ const SignUpForm = (props) => {
               required
               name="name"
               label="Name"
+              placeholder="eg. abc"
               error={!!errors.name}
               helperText={errors.name}
               as={TextField}
@@ -74,6 +75,7 @@ const SignUpForm = (props) => {
               required
               name="password"
               label="Password"
+              placeholder="eg. 12345"
               error={!!errors.password}
               helperText={errors.password}
               as={TextField}
